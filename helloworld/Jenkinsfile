@@ -2,12 +2,13 @@ pipeline {
     agent {
         label "master"
     }
+    tools {
+        maven 'maven'
+    }
     stages {
        stage('envsetup') {
            steps {
               echo " mvn path setup "
-              sh " M3_HOME=/home/vagrant/apache-maven-3.8.6 "
-              sh " export PATH=$PATH:$M3_HOME/bin "
            }
        }    
        stage('Build') {
