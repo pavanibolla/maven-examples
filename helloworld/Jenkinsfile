@@ -1,0 +1,24 @@
+pipeline {
+    agent {
+        label "master"
+    }
+    stages {
+       stage('Build') {
+          steps {
+              echo "building the code"
+              sh 'mvn compile'
+          }
+       }
+       stage('Test') {
+          steps {
+            echo "mvn test"
+            
+          }
+       }
+       stage('Deploy') {
+          steps {
+            echo "mvn install"
+          }
+       }
+    }
+}
