@@ -14,7 +14,7 @@ pipeline {
        stage('Build') {
           steps {
               echo "building the code"
-              sh 'cd helloworld'
+              sh 'cd $workspace/helloworld'
               sh 'mvn compile'
           }
        }
