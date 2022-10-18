@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.st.hello</groupId>
 	<artifactId>helloworld</artifactId>
-	<version>1.0.${env.BUILD_NUMBER}.0/version>
+	<version>1.0.${env.BUILD_NUMBER}.0</version>
 	<name>helloworld</name>
 	<description>Demo project for Spring Boot for helloworld</description>
 	
