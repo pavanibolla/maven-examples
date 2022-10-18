@@ -10,12 +10,35 @@
 	</parent>
 	<groupId>com.st.hello</groupId>
 	<artifactId>helloworld</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>helloworld</name>
 	<description>Demo project for Spring Boot for helloworld</description>
+	
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+	<repositories>
+                <repository>
+                        <snapshots>
+                                <enabled>false</enabled>
+                        </snapshots>
+                        <id>central</id>
+                        <name>Maven Repository Switchboard</name>
+                        <url>https://repo1.maven.org/maven2</url>
+                </repository>
+        </repositories>
+	
+	<distributionManagement>
+            <snapshotRepository>
+               <id>nexus-snapshots</id>
+               <url>http://localhost:8081/repository/maven-snapshots/</url>
+            </snapshotRepository>
+           <repository>
+              <id>nexus-release</id>
+              <url>http://localhost:8081/repository/maven-releases/</url>
+           </repository>
+        </distributionManagement>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
