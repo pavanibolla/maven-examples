@@ -15,18 +15,18 @@ pipeline {
           steps {
               echo "building the code"
               sh "cd helloworld"
-              sh 'mvn compile'
+              sh 'mvn -f helloworld/pom.xml compile'
           }
        }
        stage('Test') {
           steps {
-            echo "mvn test"
+            echo "mvn -f helloworld/pom.xml test"
             
           }
        }
        stage('Deploy') {
           steps {
-            echo "mvn install"
+            echo "mvn -f helloworld/pom.xml install"
           }
        }
     }
