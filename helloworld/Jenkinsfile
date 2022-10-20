@@ -15,7 +15,7 @@ pipeline {
           steps {
               echo "building the code"
               sh "cd helloworld"
-              sh 'mvn -f helloworld/pom.xml deploy'
+              sh 'mvn -f helloworld/pom.xml compile'
           }
        }
        stage('Test') {
