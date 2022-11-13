@@ -1,0 +1,11 @@
+---
+- name: sample file creation playbook
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: creating a dev.xml file
+      file:
+         path: /tmp/dev.xml
+         state: absent
+
+

@@ -1,0 +1,9 @@
+---
+- name: sample paybook to copy a file
+  hosts: webservers
+  become: true
+  tasks:
+    - name: copying a build.xml file
+      copy:
+        src: /home/ansible/playbooks/build.xml
+        dest: /tmp/build.xml

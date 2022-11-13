@@ -1,0 +1,13 @@
+---
+- name: creating sample script to install httpd on linu matches
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: installing apache for debian
+      command: apt-get install apache2 -yes
+      when: ansible_os_family == "Debian"
+
+    - name: installing apache for redhat
+      command: yum install httpd -y
+      when: ansible_os_family == "RedHat"

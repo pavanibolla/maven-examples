@@ -1,0 +1,9 @@
+---
+- name: Sample  playbook for  directory creating
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: creating the nexus directory
+      file:
+        path: /tmp/nexus
+        state: absent

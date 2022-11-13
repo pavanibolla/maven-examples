@@ -1,0 +1,11 @@
+---
+- name: My Test Playbook
+  hosts: webservers
+  tasks:
+    - name: Creating a user arun
+      user:
+       name: arun
+       comment: arun user
+       state: present
+      ignore_errors: yes
+    

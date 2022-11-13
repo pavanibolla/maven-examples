@@ -1,0 +1,12 @@
+---
+- name: sample user creation
+  hosts: webservers
+  become: true
+
+  vars:
+    user: pavanibolla
+  tasks: 
+   - name: creating user {{user}}
+     user:
+       name: '{{user}}'
+     

@@ -1,0 +1,18 @@
+---
+- name: variables playbook
+  hosts: webservers
+  become: true
+
+  vars_files:
+    - user.yml
+
+  tasks:
+    - name: creating user1 {{user1}}
+      user:
+        name: "{{user1}}"
+        state: present
+
+    - name: creating user2 {{user2}}
+      user:
+        name: "{{user2}}"
+        state: present
